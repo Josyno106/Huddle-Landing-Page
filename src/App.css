@@ -1,38 +1,273 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: myFirstFont;
+  src: url(https://fonts.google.com/specimen/Open+Sans);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+/*set the css variables */
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Light-Pink: hsl(321, 100%, 78%);
+  --Light-Red: hsl(0, 100%, 63%);
+
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Very-Pale-Blue: hsl(207, 100%, 98%);
+
+  /********** Headings *************/
+  --Font-Family: myFirstFont;
+
+  /*********Body Text*********/
+  --Font-Famidly: [Open Sans](https://fonts.google.com/specimen/Open+Sans);
+  --Font-Weights: 400, 600, 700;
+}
+body {
+  padding: 0;
+}
+.home {
+  background-color: bisque;
+  color: red;
+  font-family: myFirstFont;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  margin: 3rem 8rem 0rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav > button {
+  color: var(--Pink);
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 1.2rem;
+  border: 1px solid var(--Pink);
+}
+.nav > button:hover {
+  color: white;
+  background-color: var(--Pink);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  margin: 10rem 15rem 8rem 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.hero > h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.hero > p {
+  margin: 2rem 14rem;
+  font-size: large;
+  text-align: center;
+  line-height: 25px;
+}
+.hero > button {
   color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.7rem 2.8rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.hero > button:hover {
+  background-color: white;
+  color: var(--Pink);
+  border: 1px solid var(--Pink);
+  cursor: pointer;
+}
+.mockup {
+  padding: 0 15rem;
 }
 
-.App-link {
-  color: #61dafb;
+.stats {
+  margin: 5.5rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stats > .communities > h2,
+.stats > .messages > h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.stats > .communities > p,
+.stats > .messages > p {
+  font-size: large;
+  text-align: center;
+}
+
+.grow-together-full,
+.your-users-full {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.grow-together,
+.your-users {
+  padding: 2rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-Pale-Blue);
+}
+.grow-together > .description,
+.your-users > .description {
+  text-align: start;
+  padding-right: 8rem;
+  font-size: large;
+}
+.grow-together > .description > h2,
+.your-users > .description > h2 {
+  margin-bottom: 0.8rem;
+  font-size: 2.8rem;
+}
+.grow-together > .description > p,
+.your-users > .description > p {
+  line-height: 1.5rem;
+}
+.grow-together > img,
+.your-users > img {
+  height: 20rem;
+}
+
+.flowing-conversations {
+  margin: 5rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.flowing-conversations > .description {
+  text-align: start;
+  padding-left: 6rem;
+  font-size: large;
+}
+.flowing-conversations > .description > h2 {
+  margin-bottom: 0.8rem;
+  font-size: 2.8rem;
+}
+.flowing-conversations > .description > p {
+  line-height: 1.5rem;
+}
+.flowing-conversations > img {
+  height: 18rem;
+}
+
+.build {
+  margin: 10rem 15rem 8rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.build > h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.build > button {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 2rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.build > button:hover {
+  background-color: white;
+  color: var(--Pink);
+  border: 1px solid var(--Pink);
+  cursor: pointer;
+}
+.footer-full {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-content {
+  padding: 4rem 13rem 0 15rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-Dark-Cyan);
+  padding-bottom: 10rem;
+}
+
+.footer-content > .description {
+  text-align: start;
+  margin-right: 4rem;
+  padding-right: 10rem;
+  font-size: large;
+  color: var(--Very-Pale-Blue);
+  font-size: larger;
+}
+.footer-content > .description > p {
+  margin: 1rem 0;
+  padding-right: 1.8rem;
+}
+.footer-content > .description > h5 {
+  margin: 0.8rem 0;
+}
+
+.footer-content > .description > .social-icons {
+  margin: 2rem 0;
+}
+
+.footer-content > .news-letter {
+  width: 100%;
+}
+.footer-content > .news-letter > h2 {
+  margin-bottom: 1rem;
+}
+.footer-content > .news-letter > p {
+  font-size: large;
+}
+
+.news-letter > .email-form > input {
+  font-size: large;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+}
+.news-letter > .email-form > button {
+  font-size: 1.1em;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 1.5rem;
+  border-radius: 1.2rem;
+  color: white;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+}
+.news-letter > .email-form > button:hover {
+  background-color: white;
+  color: var(--Pink);
+  border: 1px solid var(--Pink);
+  cursor: pointer;
+}
+.attribution {
+  text-align: center;
 }

@@ -1,9 +1,11 @@
 import React from "react";
+import logo from "./../../assets/logo.svg";
 
 function NavBar(props) {
   return (
-    <div>
-      <h1>Hello from Navbar</h1>
+    <div className="nav">
+      <img src={logo} alt="logo" />
+      <button>Try it free</button>
     </div>
   );
 }
